@@ -1,0 +1,44 @@
+1.px
+
+tamanho fixo
+usando quando você quer um valor exato, que não muda com o tamanho da tela.
+ex: WIDTH:200px (largura de 200 pixels).
+
+2.em
+
+relativo ao tamanho da fonte do elemento pai.
+se o pai tem FONT-SIZE: 20px;, 1em será 20px.
+EX: SIZE: 2em;(2 vezes o tamanho da fonte do pai).
+
+OBS: ROOT = html
+
+3. rem 
+
+relativo ao tamanho da fonte raiz (geralmete o HTML).
+se o html tem FONT-SIZE: 16px;, 1rem será 16px.
+EX: padding: 1;, 5rem; (24px se o html tiver 16px).
+
+4.% (porcentagem)
+
+relativo ao tamanho do elemento pai.
+usado para fazer elementos se ajustarem ao tamanho do seu contêiner.
+EX: WIDTH: 50%; (metade da largura do contêiner).
+
+5. vw (viewport width)
+
+relativo á largura da janela do navegador.
+EX: WIDTH: 50vw; (50% da largura da tela visível).
+
+6. vh (viewport height)
+
+relativo á altura da janela do navegador.
+EX: height: 100vh; (altura total da janela).
+
+Resumo Geral:
+
+px: tamanho fixo.
+em: relativo ao tamanho da fonte do elemento pai.
+rem: relativo ao tamanho da fonte do elemento raiz (html).
+%: relativo ao tamanho do elemento pai.
+vw e vh: relativo ao tamanho da janela do navegador.  
+
