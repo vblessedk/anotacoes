@@ -1,9 +1,15 @@
+*{    /*estilos básicos*/
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /*distância entre as linhas*/
+}
+
 header{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #3498db;
-    padding: 35px;
+    padding: 1rem;
 
 }
 
@@ -12,40 +18,65 @@ header h1{
     font-size: 30px;
 }
 
-.sessão-1{
-    padding: 75px;
-    border-radius: 20px;
-    background-color: #f62a14;
-    gap: 25px;
-    margin: 40px;
-    text-align: left;
+.main-content{
+    padding: 2rem;
+    color: #000000;
+    background-color: #ffffff;
     
+
 }
 
-.sessão-1 h2{
-    color: #ffffff;
-    font-size: 30px;
-    margin-top: -60px;
+.section{
+    padding: 2rem; /*padding em, relativo ao tamanho da fonte do pai*/
+    margin-bottom: 2em; /* espaço abaixo de cada seção*/
+    border-radius: 8px;
+    position: relative; /**/
+}
+.sessão-1{
+    background-color: #f62a14;
+    color: #000000;
    
 }
 
- .div-pai{
-    display: flex;
-    border-radius: 20px;
-    
+.sessão-2{
+    background-color: #2ecc71;
+    color: #000000;
 }
 
-.sessão-1 .caixa-1{
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 20px;
-
+.sessão-3{
+    background-color: #f39c12;
+    color: #000000;
 }
 
-.sessão-1 .caixa-2{
-    padding: 20px;
+.box{
     background-color: #ffffff;
-    border-radius: 20px;
+    color: #000000;
+    padding: 2rem; /* padding aumentado para maior visibilidade*/
+    margin: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem; /* tamanho da fonte aumentado para maior legabilidade*/
+    box-sizing: border-box; /* inclui padding e borda no cálculo da largura*/
+}
 
+/*layout das caixas*/
+.caixa-1, .caixa-2, .caixa-3, .caixa-4, .caixa-5, .caixa-6 {
+    width: calc(50% - 2rem); /*largura das caixas ajustada para caber duas por linha com espaçamento*/
+    float: left; /*trabalha com a distribuição dos elementos... */
+}
 
+/*limpeza do float*/
+.section::after{
+content: ""; /*adiciona um elemento invisivel apos o conteudo da seção */
+display: table; /*faz com o que o elemento invisivel se comporte como um bloco, forçando o contâiner a incluir elementos flutuantes*/
+clear: both; /* garante que o contâiner "limpe" os elementos flutuantes, evitando problemas no layout*/
+}
+
+/*responsividade*/
+
+/*ajuste para telas grandes (largura acima de 1200px)*/
+@media (min-width: 1200px){
+    .box{
+        width: calc(33.333% - 2rem); /*largura de 33.333% para três caixas por linha*/
+    }
 }
