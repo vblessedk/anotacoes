@@ -1,0 +1,51 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3498db;
+    padding: 35px;
+
+}
+
+header h1{
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.sessão-1{
+    padding: 75px;
+    border-radius: 20px;
+    background-color: #f62a14;
+    gap: 25px;
+    margin: 40px;
+    text-align: left;
+    
+}
+
+.sessão-1 h2{
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: -60px;
+   
+}
+
+ .div-pai{
+    display: flex;
+    border-radius: 20px;
+    
+}
+
+.sessão-1 .caixa-1{
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+
+}
+
+.sessão-1 .caixa-2{
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+
+
+}

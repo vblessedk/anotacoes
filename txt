@@ -1,0 +1,171 @@
+guia de unidades de medida no CSS: quando usar cada uma.
+
+1. px (pixels)
+
+uso recomendado:
+
+para tamahos fixos e precisos que não devem variar com o tamanho da tela ou de texto.
+ideal para BORDAS, MARGENS e tamanhos de elementos que precisam  MANTER uma aparência CONSISTENTE.
+
+quando evitar:
+
+quando você que o desing seja mais flexível e adaptável a diferentes tamanhos de tela e configuração de acessibilidade.
+
+exemplo de uso:
+
+html:
+
+<div class="box">
+</div>
+
+css:
+
+.box{
+    width: 300px; /* largura fixa*/
+    height: 200px; /*altura fixa*/
+    background-color: red;
+}
+
+2. em (relative to parent font size)
+
+uso recomendado:
+
+quando você deseja que o tamanho de um elemento seja relativo ao tamanho da fonte de seu elemento pai.
+ideal para criar layouts e tipografia que se adaptam ao tamanho do texto pai.
+
+quando evitar:
+
+se você precisa de consistência em relação ao tamanho da fonte em toda aplicação, independente da hierarquia de elementos.
+
+exemplo de uso:
+
+html:
+<div class="container">
+    <div class="child">
+    </div>
+</div>
+
+css:
+.container{
+    font-size; 16px; /* tamanho base - pai*/
+}
+
+.child{
+    font-size; 1.Sem; /*1.5 vezes o tamanho da fonte do pai (24px)*/
+}
+
+3. rem (relative to root font size)
+
+uso recomendado:
+
+para criar tamanhos de fontes e espaçamentos consistentes em toda a aplicação, baseando-se no tamanho da fonte raiz.
+(<html>).
+ideal para layouts e tipografia que precisam ser consistentes independente do tamanho da fonte dos elementos pais.
+
+quando evitar:
+
+quando você quer um tamanho que seja relativo apenas ao elemento pai esepcífico e não é raiz.
+
+exemplo de uso:
+
+html:
+<div class="container">
+    <div class="text">
+        <p>lorem</p>
+    </div>
+</div>
+
+css:
+html{
+    font-size: 16px; /* tamanho base da fonte*/
+}
+
+.text{
+    font-size: 2rem; /* 32px (2 * 16px)*/
+}
+
+4. vh (viewport height)
+
+uso recomendado:
+
+para definir tamanhos de altura relativos à altura da viewport, como para criar seções de tela cheia ou elementos 
+que devem ocupar uma porcentegem da altura de tela. 
+ideal para layouts que devem se ajustar a altura de tela do usuário.
+
+quando evitar:
+
+para elemetos que não precisam ser sensiveis ao tamanho da viewport e devem ter tamanhos fixos ou proporcionais ao 
+conteúdo.
+
+exemplo de uso:
+
+html:
+<section class="fullsreen-section">
+    <p>lorem</p>
+</section>
+testar em tamanhos de telas diferentes.
+
+css:
+
+.fullscreen-section{
+    height: 100vh; /*100% da altura da viewport*/
+    widht: 50vw
+    background-color: black;
+}
+
+5. vw(viewport width)
+
+uso recomendado:
+
+para definir tamanhos de largura relativos à largura da viewport, útil para criar layouts responsivos ou elementos que 
+devem ajustar a largura da tela.
+ideal para elementos que precisam ocupar uma porcentegem da largura da tela do usuário.
+
+quando evitar:
+
+para elementos cuja largura não ndeve depender da largura da viewport e deve ser fixa ou proporcional ao conteúdo.
+
+exemplo de uso:
+
+html:
+<section class="responsive-element">
+    <p>lorem</p>
+</section>
+
+css:
+.resposive-element{
+    width: 50vw; /* 50% da largura da viewport*/
+    height: 50vh;
+    background-color: yellow;
+}
+
+6. % (percentual)
+
+uso recomendado:
+
+para definir tamanhos relativos ao tamanhos do elemento pai, ideal para layouts flexíveis e adaptáveis.
+Útil para definir larguras e alturas de elementos.
+
+quando evitar: 
+
+quando o tamanho não deve depender do elemento pai, especialmente se o elemento pai não tiver um tamanho fixo ou
+previsivelo.
+
+exemplo de uso:
+
+html:
+<div class="parend">
+    <div class="child">
+    </div>
+</div>
+
+css:
+.parent{
+    width: 500px /* largura fixa do pai*/
+    background-color: green;
+}
+
+.child{
+    width: 50%; /* 50% da largura do elemento pai (250px)*/
+    background-color: pink;
+}
