@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+
+h1::after{
+    content: '';  /*conteúdo*/
+    width: 140px; /*largura*/
+    height: 4px; /*altura*/
+    background-color: purple; /*cor*/
+    display: block; /*display em bloco*/
+    margin: 10px auto; /*margem */
+    
+}
+
+h1::before{
+    content: '';  /*conteúdo*/
+    width: 140px; /*largura*/
+    height: 4px; /*altura*/
+    background-color: purple; /*cor*/
+    display: block; /*display em bloco*/
+    margin: 10px auto; /*margem */
+}

@@ -21,13 +21,12 @@ header h1{
 .main-content{
     padding: 2rem;
     color: #000000;
-    background-color: #ffffff;
-    
+  
 
 }
 
 .section{
-    padding: 2rem; /*padding em, relativo ao tamanho da fonte do pai*/
+    padding: 2em; /*padding em, relativo ao tamanho da fonte do pai*/
     margin-bottom: 2em; /* espaço abaixo de cada seção*/
     border-radius: 8px;
     position: relative; /**/
@@ -62,14 +61,30 @@ header h1{
 /*layout das caixas*/
 .caixa-1, .caixa-2, .caixa-3, .caixa-4, .caixa-5, .caixa-6 {
     width: calc(50% - 2rem); /*largura das caixas ajustada para caber duas por linha com espaçamento*/
-    float: left; /*trabalha com a distribuição dos elementos... */
+    float: left; /*trabalha com a distribuição dos elementos.  */
 }
 
 /*limpeza do float*/
 .section::after{
 content: ""; /*adiciona um elemento invisivel apos o conteudo da seção */
 display: table; /*faz com o que o elemento invisivel se comporte como um bloco, forçando o contâiner a incluir elementos flutuantes*/
+
+/*esse "espaço vazio" se comporta como uma parte da mesa.
+Ele age como um bloco, o que significa que ajuda a agrupar
+tudo oqe está na mesa, fazendo com oqe os itens ao redor 
+se organizem melhor.*/
+
+/*ao fazer o elemento invisível se comportar como uma tabela, 
+você garante que ele atue como um bloco que mantém a estrutura 
+do contâiner. Isso ajuda a forçar o contâiner a "abraçar" todos
+os elementos flutuantes, evitando que eles "saíam" do espaço que deveriam 
+ocupar.*/
+
 clear: both; /* garante que o contâiner "limpe" os elementos flutuantes, evitando problemas no layout*/
+
+/*Isso garante que, após as caixas de frutas (ou outros itens) na mesa, nada mais flutue ao lado. 
+É como se você estivesse dizendo: "Depois da bandeja vazia, nada pode ficar ao lado; tudo deve ficar em uma nova linha."
+Isso evita que a mesa fique desorganizada e os itens se sobreponham.*/
 }
 
 /*responsividade*/
@@ -80,3 +95,4 @@ clear: both; /* garante que o contâiner "limpe" os elementos flutuantes, evitan
         width: calc(33.333% - 2rem); /*largura de 33.333% para três caixas por linha*/
     }
 }
+
