@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    padding: 75px;
+    background-color:silver;
+
+}
+
+.sessão-1{
+    padding: 180px;
+    background-color: royalblue;
+
+}
+
+.sessão-2{
+    padding: 180px;
+    background-color: royalblue;
+
+}
+
+footer{
+    padding: 75px;
+    background-color: silver;
+}
+@media (max-width:480px){
+    header{
+        background-color: red;
+    }
+}
+
+@media (min-width:480px){
+    .sessão-1{
+        background-color: red;
+    }
+}
+
+/*estlios para tablets*/
+
+@media (min-width:600px) and (max-width:1024px){
+
+    .sessão-1{
+        color: pink;
+        background-color: white;
+    }
+}
+/*min-width > largura mínima. O elemento não pode ser menor que esse valor.*/
+
+/*max-width > largura máxima. O elemento não pode ser maior que o valor.*/
