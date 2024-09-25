@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* O box-sizing; border-box garante que o padding seja incluído no cálculo da largura, evitando que o conteúdo ultrapasse a tela.*/
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    padding: 10vh;
+    background-color: royalblue;
+    width: 100vw;
+}
+
+.sessão-01{
+    background-color: yellow;
+    padding: 2vh;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;  
+    width: 100vw;
+}
+
+.sessão-02{
+    background-color: aquamarine;
+    padding: 30vh;
+    width: 100vw;
+}
+
+/*estilização para tamanhos de telas específicos ou seja, para uma largura máxima de 766px*/
+@media (max-width: 766px){
+    .sessão-01{
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.div-02 img{
+    margin: 0 auto; /*aqui estou chamando a Imagem e definindo que a mesma fique com os valores superior/ inferior em 0 e as laterais sejam auto*/
+    width: 20rem; /*largura da imagem*/
+}
+
+footer  {
+    padding: 10vh;
+    background-color: bisque;
+    width: 100vw;
+}
