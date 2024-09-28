@@ -13,7 +13,7 @@ html {
 
 
 header{
-    padding: min(5vh, 4rem); /*ajustando o padding para ser flexivel*/
+    padding: min(2vh, 2rem); /*ajustando o padding para ser flexivel*/
     background-color:#000000 ;
     width: 100%; /*colocamos a largura para 100% do espaço disponível*/
     display: flex;
@@ -31,6 +31,7 @@ header{
 header img{
     width: 10rem;
     height:11rem ;
+ 
 }
 
 header button{
@@ -42,5 +43,84 @@ header button{
     color: #ffffff;
     display: flex;
     align-items: center;  
-    justify-content: center.;
+    justify-content: center;
+}
+
+.sessão-1  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000000;
+    width: 100%;
+    padding: min(20vh, 6rem);
+}
+
+.sessão-2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000000;
+    width: 100%;
+    padding: min(20vh, 6rem);
+}
+
+.div-01 p{
+    font-size: 2rem;
+    margin: 1.2em;
+    color: #ffffff;
+}
+
+.div-02 img{
+    width: 30em;
+    margin: 5rem auto;
+    border-radius: 3em;
+    display: block; 
+}
+
+footer{
+    background-color: #000000;
+    width: 100%;
+    padding: min(10vh, 4rem);
+}
+
+@media(max-width: 888px){
+    header img{
+        font-size: 5.5em;
+        z-index: 999;
+    }
+
+    header button{
+        width: 10rem;
+        height: 0.8rem;
+    }
+
+    .sessão-1{
+        padding: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .sessão-2{
+        padding: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .div-01 p{
+        font-size: 1.1rem;
+        line-height: 1.5;
+        text-align: left;
+        padding: 2rem;
+        width: 100%;
+        margin: 2em;
+    }
+
+    .div-02 img{
+        width: 20rem;
+        margin: 0.2rem;
+    }
 }
